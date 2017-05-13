@@ -1,5 +1,7 @@
 package com.yk.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,5 +32,10 @@ public class UserService {
 	
 	public void updateUser(User user){
 		userDAO.updateUser(user);
+	}
+
+	public List<User> getAllUser() {
+		// TODO Auto-generated method stub
+		return userDAO.getAllUser();
 	}
 }

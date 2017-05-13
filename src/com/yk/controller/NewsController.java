@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.yk.entity.News;
 import com.yk.service.NewsService;
 
 @Controller
@@ -21,6 +22,13 @@ public class NewsController {
 	public String newsGet(HttpSession session, Model model){
 		
 		model.addAttribute("newsList", newsService.getAllNews());
+		return "news";
+	}
+	
+	@RequestMapping(value="/pnews",method = RequestMethod.POST)
+	public String pnews(HttpSession session, News news){
+		
+		newsService.saveNews(news);
 		return "news";
 	}
 }

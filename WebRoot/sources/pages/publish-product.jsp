@@ -52,43 +52,43 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           <h2 class="panel-title"> 编辑软件产品信息 </h2>
         </div>
         <div class="panel-body">
-          <form class="form-horizontal" role="form">
+          <form class="form-horizontal" role="form" action="/yk/sources/pages/pproduct" method="post">
             <div class="form-group">
               <label for="Nname" class="col-sm-2 control-label">软件名：</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="Nname" 
+                <input type="text" class="form-control" id="Nname" name="s_name"
 				   placeholder="请输入软件名">
               </div>
             </div>
             <div class="form-group">
               <label for="Nname" class="col-sm-2 control-label">版本号：</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="Nname" 
+                <input type="text" class="form-control" id="Nname" name="s_version"
 				   placeholder="请输入软件版本号">
               </div>
             </div>
             <div class="form-group">
               <label for="" class="col-sm-2 control-label">软件类别：</label>
               <label class="checkbox-inline">
-                <input type="radio" name="optionsRadiosinline" id="optionsRadios1" value="option1" checked>
+                <input type="radio" name="s_category" id="optionsRadios1" value="1" checked>
                 办公软件
               </label>
               <label class="checkbox-inline">
-                <input type="radio" name="optionsRadiosinline" id="optionsRadios2" value="option2">
+                <input type="radio" name="s_category" id="optionsRadios2" value="2">
                 图像制作软件
               </label>
               <label class="checkbox-inline">
-                <input type="radio" name="optionsRadiosinline" id="optionsRadios2" value="option2">
+                <input type="radio" name="s_category" id="optionsRadios2" value="3">
                 工程软件
               </label>
               <label class="checkbox-inline">
-                <input type="radio" name="optionsRadiosinline" id="optionsRadios2" value="option2">
+                <input type="radio" name="s_category" id="optionsRadios2" value="4">
                 其他
               </label>
             </div>
             <div class="form-group">
               <label for="Ndesc" class="col-sm-2 control-label">产品介绍：</label>
-              <textarea class="form-control " rows="20" style="width:80%;padding-left: 15px;"></textarea>
+              <textarea class="form-control " name="s_desc" rows="20" style="width:80%;padding-left: 15px;"></textarea>
             </div>
             <div class="form-group">
               <div class="col-sm-offset-2 col-sm-10">

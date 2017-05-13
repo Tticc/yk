@@ -29,6 +29,7 @@ public class News {
 	@Column(name="n_time",nullable=false)  
     private Date n_time = new Date();
 	
+	// 1为企业动态, 2为员工活动
 	@Column(name="n_category",nullable=false)  
     private String n_category;
 

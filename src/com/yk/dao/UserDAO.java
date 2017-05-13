@@ -51,4 +51,11 @@ public class UserDAO {
 		// TODO Auto-generated method stub
 		sessionFactory.getCurrentSession().update(user);
 	}
+
+	@Transactional
+	public List<User> getAllUser() {
+		String queryStr = "from User";
+		Query query = sessionFactory.getCurrentSession().createQuery(queryStr);
+		return query.list();
+	}
 }

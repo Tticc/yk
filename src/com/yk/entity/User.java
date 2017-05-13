@@ -24,6 +24,7 @@ public class User {
 	@Column(name="u_password",nullable=false)  
 	private String u_password;
 	
+	//如果值为"1" ,男性，值为"2",女性
 	@Column(name="u_sex",nullable=false)  
 	private String u_sex;
 	

@@ -156,6 +156,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <div class="twothird box right">
                     <h2 class="widget-head-border colr">物联网系统</h2>
                     <div class="blog">
+                    
+                    	<c:if test="${products != null}" var="name1">
+                    	<c:forEach var="product" items="${products}" >
                         <!-- Blog Post Start -->
                         <div class="post">
                             <div class="post-sec">
@@ -165,21 +168,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                 <div class="post-desc">
                                     <h3><strong>产品简介:</strong></h3>
                                     <p>
-                                    云凯产品溯源系统可对每件产品建立一个独立的电子档案，是一个能够连接生产、加工、监管、流通和消费各个环节，清晰了解商品生产和流通过程，提高客户对产品信任度的产品信息管理系统。
+                                   ${product.s_desc}
                                     </p>                  
                                 </div>
                                 <div class="post-desc">
                                     <h3><strong>产品特点:</strong></h3>
                                     <p>
-                                    云凯产品溯源系统可对每件产品建立一个独立的电子档案，是一个能够连接生产、加工、监管、流通和消费各个环节，清晰了解商品生产和流通过程，提高客户对产品信任度的产品信息管理系统。
+                                    ${product.s_desc}
                                     </p>                  
                                 </div>
                                
-                            </div>
-                           
-                       
+                            </div>     
                         <!-- Blog Post End -->
                     </div>
+                    	</c:forEach>
+                    	</c:if>
+                    
+                    
                 </div>
                 <!-- Two Third Box End -->
             </div>

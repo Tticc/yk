@@ -40,8 +40,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             </c:if>
             <c:if test="${sessionScope.u_name == null}" var="name1">
 	            <a href="/yk/sources/pages/admin-login.jsp" class="text">进入后台</a>
-	            <a href="#" class="text">注册</a>
-	            <a href="#" class="text">登录</a>
+	            <a href="/yk/sources/pages/reg.jsp" class="text">注册</a>
+	            <a href="/yk/sources/pages/login.jsp" class="text">登录</a>
             </c:if>
             <!-- Top Bar Text End -->
         </div>

@@ -56,6 +56,22 @@ public class UserController {
 		return "admin-login";
 	}
 	
+	@RequestMapping(value="/ulogin",method = RequestMethod.GET)
+	public String ulogin(){
+		return "login";
+	}
+	@RequestMapping(value="/ulogin",method = RequestMethod.POST)
+	public String uloginPost(HttpSession session, User user){
+		User ur = userService.getUserByName(user.getU_name());
+		if(ur == null || !user.getU_password().equals(ur.getU_password())){
+			return "login";
+		}
+		session.setAttribute("u_name", ur.getU_name());
+		session.setAttribute("u_id", ur.getU_id());
+		session.setAttribute("r_id", ur.getR_id());
+		return "index";
+	}
+	
 	@RequestMapping(value="/messagea",method = RequestMethod.GET)
 	public String messageGet(HttpSession session, Model model){
 		//user.getU_name();
@@ -78,15 +94,20 @@ public class UserController {
 	}
 	@RequestMapping(value="/adminReg",method = RequestMethod.POST)
 	public String adminReg(HttpSession session, User user){
-		boolean iftt = user.getU_sex().equals("1");
-		boolean iftt2 = user.getU_sex().equals("2");
-		boolean ifs = user.getR_id()==1;
-		//userService.saveUser(user);
-		return "redirect:admin-user";
+		
+		userService.saveUser(user);
+		return "redirect:adminuser";
+	}
+	@RequestMapping(value="/reg",method = RequestMethod.POST)
+	public String reg(HttpSession session, User user){
+		
+		userService.saveUser(user);
+		return "login";
 	}
 	@RequestMapping(value="/adminuser",method = RequestMethod.GET)
 	public String adminUser(HttpSession session,Model model){
-		//userService.
+		//;
+		model.addAttribute("allUser", userService.getAllUser());
 		return "admin-user";
 	}
 	

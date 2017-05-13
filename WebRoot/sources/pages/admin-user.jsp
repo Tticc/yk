@@ -66,14 +66,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
               </tr>
             </thead>
             <tbody>
+                    	<c:if test="${allUser != null}" var="name1">
+                    	<c:forEach var="user" items="${allUser}" >
               <tr>
-                <td>admin</td>
+                <td>${user.u_name}</td>
+              <c:if test="${user == \"1\"}" var="name1">
                 <td>管理员</td>
+                </c:if>
+              <c:if test="${user == \"2\"}" var="name1">
+                <td>普通用户</td>
+                </c:if>
                 <td>
                   <button type="button" class="btn btn-default">初始化密码</button>
                   <button type="button" class="btn btn-default">删除</button>
                 </td>
               </tr>
+                    	</c:forEach>
+                    	</c:if>
               <tr>
                 <td>王小二</td>
                 <td>普通用户</td>

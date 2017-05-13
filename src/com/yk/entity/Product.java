@@ -25,11 +25,12 @@ public class Product {
     private String s_version;
 	
 	@Column(name="s_platform",nullable=false)  
-    private String s_platform;
+    private String s_platform = "null";
 	
 	@Column(name="s_value",nullable=false)  
     private String s_value;
 	
+	//1办公软件, 2 图像制作软件, 3工程软件, 4其他
 	@Column(name="s_category",nullable=false)  
     private String s_category;
 	

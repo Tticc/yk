@@ -43,7 +43,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           </ul>
         </li>
         <li> <a href="messagea"> <i class="glyphicon glyphicon-globe"></i> 留言管理 </a> </li>
-        <li> <a href="admin-user.jsp"> <i class="glyphicon glyphicon-user"></i> 用户管理 </a> </li>
+        <li> <a href="adminuser"> <i class="glyphicon glyphicon-user"></i> 用户管理 </a> </li>
         <li> <a href="about.jsp"> <i class="glyphicon glyphicon-fire"></i> 关于系统 </a> </li>
       </ul>
     </div>
