@@ -29,6 +29,13 @@ public class NewsController {
 	public String pnews(HttpSession session, News news){
 		
 		newsService.saveNews(news);
-		return "news";
+		return "redirect:newsa";
+	}
+	
+	@RequestMapping(value="/pnews",method = RequestMethod.GET)
+	public String pnewsGET(HttpSession session){
+		
+		//newsService.saveNews(news);
+		return "redirect:newsa";
 	}
 }

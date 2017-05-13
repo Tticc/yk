@@ -44,7 +44,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           </ul>
         </li>
         <li> <a href="admin-messages.jsp"> <i class="glyphicon glyphicon-globe"></i> 留言管理 </a> </li>
-        <li> <a href="admin-user.jsp"> <i class="glyphicon glyphicon-user"></i> 用户管理 </a> </li>
+        <li> <a href="adminuser"> <i class="glyphicon glyphicon-user"></i> 用户管理 </a> </li>
         <li> <a href="about.jsp"> <i class="glyphicon glyphicon-fire"></i> 关于系统 </a> </li>
       </ul>
     </div>
@@ -70,10 +70,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     	<c:forEach var="user" items="${allUser}" >
               <tr>
                 <td>${user.u_name}</td>
-              <c:if test="${user == \"1\"}" var="name1">
+              <c:if test="${user.r_id == 1}" var="name1">
                 <td>管理员</td>
                 </c:if>
-              <c:if test="${user == \"2\"}" var="name1">
+              <c:if test="${user.r_id == 2}" var="name1">
                 <td>普通用户</td>
                 </c:if>
                 <td>

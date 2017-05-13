@@ -28,7 +28,7 @@ public class Product {
     private String s_platform = "null";
 	
 	@Column(name="s_value",nullable=false)  
-    private String s_value;
+    private String s_value = "null";
 	
 	//1办公软件, 2 图像制作软件, 3工程软件, 4其他
 	@Column(name="s_category",nullable=false)  

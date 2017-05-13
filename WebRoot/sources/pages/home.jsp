@@ -36,7 +36,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	<div class="inner">
             <!-- Top Bar Text Start -->
             <c:if test="${sessionScope.u_name != null}" var="name1">
-            	<a href="#" class="text">${ sessionScope.u_name}</a>
+            	<c:if test="${sessionScope.r_id == 1}" var="name1">
+            		<a href="/yk/sources/pages/dashboard.jsp" class="text">${ sessionScope.u_name}</a>
+            	</c:if>
+            	<c:if test="${sessionScope.r_id != 1}" var="name1">
+            		<a href="#" class="text">${ sessionScope.u_name}</a>
+            	</c:if>
             </c:if>
             <c:if test="${sessionScope.u_name == null}" var="name1">
 	            <a href="/yk/sources/pages/admin-login.jsp" class="text">进入后台</a>

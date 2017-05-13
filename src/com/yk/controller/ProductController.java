@@ -22,7 +22,12 @@ public class ProductController {
 	public String pnews(HttpSession session, Product product){
 		
 		productService.saveProduct(product);
-		return "product-details";
+		return "redirect:products";
+	}
+	
+	@RequestMapping(value="/pproduct",method = RequestMethod.GET)
+	public String pnewsGet(HttpSession session){
+		return "redirect:products";
 	}
 	
 	@RequestMapping(value="/products",method = RequestMethod.GET)

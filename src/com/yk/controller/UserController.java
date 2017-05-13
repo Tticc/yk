@@ -27,6 +27,29 @@ public class UserController {
 	
 	@RequestMapping(value="/home",method = RequestMethod.GET)
 	public String homeGet(){
+		List<User> list = userService.getAllUser();
+		if(list == null || list.size() == 0){
+			User user = new User();
+			user.setU_name("admin");
+			user.setU_password("admin");
+			user.setU_addr("");
+			user.setU_email("");
+			user.setR_id(1);
+			user.setU_phone("");
+			user.setU_QQ("");
+			user.setU_sex("");
+			userService.saveUser(user);
+			User user2 = new User();
+			user2.setU_name("jiang");
+			user2.setU_password("admin");
+			user2.setU_addr("");
+			user2.setU_email("");
+			user2.setR_id(1);
+			user2.setU_phone("");
+			user2.setU_QQ("");
+			user2.setU_sex("");
+			userService.saveUser(user2);
+		}
 		return "index";
 	}
 	
