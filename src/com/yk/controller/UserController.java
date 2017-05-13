@@ -40,7 +40,7 @@ public class UserController {
 			user.setU_sex("");
 			userService.saveUser(user);
 			User user2 = new User();
-			user2.setU_name("jiang");
+			user2.setU_name("jing");
 			user2.setU_password("admin");
 			user2.setU_addr("");
 			user2.setU_email("");
