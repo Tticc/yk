@@ -52,18 +52,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           <h2 class="panel-title">管理员注册</h2>
         </div>
         <div class="panel-body">
-          <form class="form-horizontal" role="form">
+          <form class="form-horizontal" role="form" action="/yk/sources/pages/adminReg" method="post">
             <div class="form-group">
               <label for="Uname" class="col-sm-2 control-label">用户名：</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="Uname" 
+                <input type="text" class="form-control" id="Uname" name="u_name"
 				   placeholder="请输入用户名">
               </div>
             </div>
             <div class="form-group">
               <label for="Password" class="col-sm-2 control-label">密码</label>
               <div class="col-sm-10">
-                <input type="password" class="form-control" id="Password" placeholder="请输入密码">
+                <input type="password" class="form-control" id="Password" name="u_password" placeholder="请输入密码">
               </div>
             </div>
             <div class="form-group">
@@ -75,36 +75,36 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <div class="form-group">
               <label for="" class="col-sm-2 control-label">性别：</label>
               <label class="checkbox-inline">
-                <input type="radio" name="optionsRadiosinline" id="optionsRadios1" value="1" checked>
+                <input type="radio" name="u_sex" id="optionsRadios1" value="1" checked>
                 男 </label>
               <label class="checkbox-inline">
-                <input type="radio" name="optionsRadiosinline" id="optionsRadios2" value="2">
+                <input type="radio" name="u_sex" id="optionsRadios2" value="2">
                女 </label>
             </div>
              <div class="form-group">
               <label for="phone" class="col-sm-2 control-label">电话：</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="phone" 
+                <input type="text" class="form-control" id="phone" name="u_phone"
 				   placeholder="请输入联系电话">
               </div>
             </div>
              <div class="form-group">
               <label for="QQ" class="col-sm-2 control-label">QQ号：</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="QQ" 
+                <input type="text" class="form-control" id="QQ" name="u_QQ"
 				   placeholder="请输入QQ号">
               </div>
             </div>
             <div class="form-group">
               <label for="email" class="col-sm-2 control-label">Email:</label>
               <div class="col-sm-10">
-                <input type="email" class="form-control" id="email" placeholder="请输入邮箱">
+                <input type="email" class="form-control" id="email" name="u_email" placeholder="请输入邮箱">
               </div>
             </div>
             <div class="form-group">
               <label for="addr" class="col-sm-2 control-label">住址：</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="addr" 
+                <input type="text" class="form-control" id="addr" name="u_addr"
 				   placeholder="请输入现住址">
               </div>
             </div>
@@ -113,6 +113,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
               <label for="Rid" class="col-sm-2 control-label">用户角色：</label>
               <div class="col-sm-10">
                 <p id="Rid" class="form-control-static">1</p>
+                <input type="hidden" class="form-control" id="r_id" name="r_id" value="1">
               </div>
             </div>
             <div class="form-group">

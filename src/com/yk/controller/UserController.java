@@ -76,5 +76,18 @@ public class UserController {
 		messageService.saveMessage(message);
 		return "redirect:messagea";
 	}
+	@RequestMapping(value="/adminReg",method = RequestMethod.POST)
+	public String adminReg(HttpSession session, User user){
+		boolean iftt = user.getU_sex().equals("1");
+		boolean iftt2 = user.getU_sex().equals("2");
+		boolean ifs = user.getR_id()==1;
+		//userService.saveUser(user);
+		return "redirect:admin-user";
+	}
+	@RequestMapping(value="/adminuser",method = RequestMethod.GET)
+	public String adminUser(HttpSession session,Model model){
+		//userService.
+		return "admin-user";
+	}
 	
 }

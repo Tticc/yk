@@ -45,6 +45,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </div>  
                     <div class="form-group">  
                         <input id="user_submit" type="submit" class="btn btn-success pull-left" value="登录 "/>     
+                        <!-- <input id="admin_reg" type="button" class="btn btn-success pull-left" value="注册 "/>      -->
                     </div>  
                 </div>  
             </form>  
@@ -53,3 +54,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 </body>
 </html>
+<script>
+$(document).ready(function(){
+	$('#admin_reg').on('click',function(){
+		location.href="/yk/sources/pages/admin-reg.jsp";
+	});
+});
+</script>
