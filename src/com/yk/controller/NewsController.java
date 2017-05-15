@@ -38,4 +38,11 @@ public class NewsController {
 		//newsService.saveNews(news);
 		return "redirect:newsa";
 	}
+	
+	@RequestMapping(value="/adminnews",method = RequestMethod.GET)
+	public String adminnewsGET(HttpSession session, Model model){
+		
+		//newsService.saveNews(news);
+		return "redirect:newsa";
+	}
 }

@@ -24,7 +24,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <div class="container">  
         <div class="form row">  
-            <form class="form-horizontal col-sm-offset-3 col-md-offset-3" id="login_form" action="/yk/sources/pages/login" method="post">  
+            <form class="form-horizontal col-sm-offset-3 col-md-offset-3" id="login_form" action="/yk/sources/pages/ulogin" method="post">  
                 <h3 class="form-title">用户登录</h3>  
                 <div class="col-sm-9 col-md-9">  
                     <div class="form-group">  

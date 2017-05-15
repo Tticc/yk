@@ -67,15 +67,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
               </tr>
             </thead>
             <tbody>
+            <c:if test="${products != null}" var="name1">
+                    	<c:forEach var="product" items="${products}" >
               <tr>
-                <td>物联网系统</td>
-                <td>1.0</td>
-                <td>其他</td>
+                <td>${product.s_name}</td>
+                <td>${product.s_version}</td>
+                <td>${product.s_category}</td>
                 <td>
                   <a href="edit-product.jsp"  class="btn btn-success">编辑</a>
-                  <button type="button" class="btn btn-default">删除</button>
+                  <a type="button" class="btn btn-default" href="/yk/sources/pages/deleteP/${product.s_id}">删除</a>
                 </td>
               </tr>
+              
+                    	</c:forEach>
+                    	</c:if>
               <tr>
                 <td>物联网系统</td>
                 <td>1.0</td>

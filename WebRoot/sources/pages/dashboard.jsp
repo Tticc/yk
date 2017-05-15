@@ -39,7 +39,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <li> <a href="#products" class="nav-header collapsed" data-toggle="collapse"> <i class="glyphicon glyphicon-cog"></i> 产品信息管理 <span class="pull-right glyphicon glyphicon-chevron-down"></span> </a>
           <ul id="products" class="nav nav-list collapse secondmenu" style="height: 0px;">
             <li><a href="publish-product.jsp"><i class="glyphicon glyphicon-th-list"></i>发布新产品</a></li>
-            <li><a href="admin-products.jsp"><i class="glyphicon glyphicon-asterisk"></i>软件产品管理</a></li>
+            <li><a href="allproducts"><i class="glyphicon glyphicon-asterisk"></i>软件产品管理</a></li>
           </ul>
         </li>
         <li> <a href="messagea"> <i class="glyphicon glyphicon-globe"></i> 留言管理 </a> </li>
